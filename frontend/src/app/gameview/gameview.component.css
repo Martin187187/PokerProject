@@ -1,0 +1,25 @@
+/* styles.css */
+
+.game {
+    display: flex;
+    padding: 10px; /* Add padding for spacing */
+}
+
+.player-list {
+    overflow-y: auto; /* Enable vertical scrolling for player list */
+    max-height: 90vh; /* Set a maximum height to fit within the viewport */
+}
+
+.board {
+    flex: 1; /* Take up available space */
+    display: flex;
+    justify-content: center; /* Center the board horizontally */
+    align-items: center; /* Center the board vertically */
+    padding: 20px; /* Add padding for spacing within the board */
+}
+.deck {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+  }

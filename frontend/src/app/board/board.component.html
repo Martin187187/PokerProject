@@ -1,0 +1,6 @@
+<h2 class="player-name">Board</h2>
+<ul class="deck">
+    <li *ngFor="let card of board_cards">
+        <app-card [card]="card" class="app-card"></app-card>
+    </li>
+</ul>

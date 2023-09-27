@@ -1,0 +1,26 @@
+<div class="player-container">
+    <h2 class="player-name">{{ player.name }}</h2>
+    <div class="info-container">
+        <div class="player-info">
+            <table class="player-stats">
+                <tr>
+                    <th>Total Money</th>
+                    <td>{{ player.total_money }}</td>
+                </tr>
+                <tr>
+                    <th>Invested Money</th>
+                    <td>{{ player.invested_money }}</td>
+                </tr>
+                <tr>
+                    <th>Status</th>
+                    <td>{{ player.status }}</td>
+                </tr>
+            </table>
+        </div>
+        <ul class="deck">
+            <li *ngFor="let card of player.hand_cards">
+                <app-card [card]="card" class="app-card"></app-card>
+            </li>
+        </ul>
+    </div>
+</div>

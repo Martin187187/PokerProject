@@ -1,0 +1,28 @@
+.player-container {
+    display: inline-flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.deck {
+
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.deck li {
+    margin: 4px;
+}

@@ -1,0 +1,12 @@
+<div class="game">
+    <div class="player-list">
+        <ul class="deck">
+            <li *ngFor="let player of players">
+                <app-playerview [player]="player" />
+            </li>
+        </ul>
+    </div>
+    <div class="board">
+        <app-board [board_cards]="board_card_list" />
+    </div>
+</div>
