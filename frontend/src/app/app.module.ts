@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { GameviewComponent } from './gameview/gameview.component';
 import { CardComponent } from './card/card.component';
-import { CarddeckComponent } from './carddeck/carddeck.component';
 import { PlayerviewComponent } from './playerview/playerview.component';
 import { BoardComponent } from './board/board.component';
 
@@ -13,7 +12,6 @@ import { BoardComponent } from './board/board.component';
     AppComponent,
     GameviewComponent,
     CardComponent,
-    CarddeckComponent,
     PlayerviewComponent,
     BoardComponent
   ],
