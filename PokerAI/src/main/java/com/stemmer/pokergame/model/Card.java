@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Card implements Comparable<Card>{
 
     public enum Value { TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING, ACE}
-    public enum Color { HEART, DIAMOND, SPADE, CLUB}
+    public enum Color {HEARTS, DIAMONDS, SPADES, CLUBS}
 
     private Value value;
     private Color color;

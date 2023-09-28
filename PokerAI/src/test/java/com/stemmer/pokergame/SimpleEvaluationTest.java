@@ -24,21 +24,21 @@ class SimpleEvaluationTest {
     @Test
     void SimpleStraightFlushTest(){
         Board board = new Board();
-        board.addCard(new Card(EIGHT, CLUB));
-        board.addCard(new Card(QUEEN, CLUB));
-        board.addCard(new Card(KING, CLUB));
-        board.addCard(new Card(JACK, CLUB));
-        board.addCard(new Card(TEN, CLUB));
+        board.addCard(new Card(EIGHT, CLUBS));
+        board.addCard(new Card(QUEEN, CLUBS));
+        board.addCard(new Card(KING, CLUBS));
+        board.addCard(new Card(JACK, CLUBS));
+        board.addCard(new Card(TEN, CLUBS));
 
-        Card handCard1 = new Card(ACE, CLUB);
-        Card handCard2 = new Card(FOUR, CLUB);
+        Card handCard1 = new Card(ACE, CLUBS);
+        Card handCard2 = new Card(FOUR, CLUBS);
         Hand hand = new Hand(handCard1, handCard2, board);
 
         var ranking = calculator.getHandRanking(hand);
 
         assertSame(ranking.getRank(), HandCalculator.HandRanking.STRAIGHT_FLUSH);
 
-        List<Card> resultHand = Arrays.asList(new Card(ACE, CLUB), new Card(KING, CLUB), new Card(QUEEN, CLUB), new Card(JACK, CLUB), new Card(TEN, CLUB));
+        List<Card> resultHand = Arrays.asList(new Card(ACE, CLUBS), new Card(KING, CLUBS), new Card(QUEEN, CLUBS), new Card(JACK, CLUBS), new Card(TEN, CLUBS));
         assertTrue(resultHand.containsAll(ranking.getHand()) && ranking.getHand().containsAll(resultHand));
 
     }
@@ -47,14 +47,14 @@ class SimpleEvaluationTest {
     void SimpleQuadTest(){
 
         Board board = new Board();
-        board.addCard(new Card(EIGHT, SPADE));
-        board.addCard(new Card(QUEEN, DIAMOND));
-        board.addCard(new Card(KING, HEART));
-        board.addCard(new Card(EIGHT, CLUB));
-        board.addCard(new Card(TEN, SPADE));
+        board.addCard(new Card(EIGHT, SPADES));
+        board.addCard(new Card(QUEEN, DIAMONDS));
+        board.addCard(new Card(KING, HEARTS));
+        board.addCard(new Card(EIGHT, CLUBS));
+        board.addCard(new Card(TEN, SPADES));
 
-        Card handCard1 = new Card(EIGHT, HEART);
-        Card handCard2 = new Card(EIGHT, DIAMOND);
+        Card handCard1 = new Card(EIGHT, HEARTS);
+        Card handCard2 = new Card(EIGHT, DIAMONDS);
         Hand hand = new Hand(handCard1, handCard2, board);
 
         var ranking = calculator.getHandRanking(hand);
@@ -65,21 +65,21 @@ class SimpleEvaluationTest {
         assertSame(ranking.getHand().get(1).getValue(), EIGHT);
         assertSame(ranking.getHand().get(2).getValue(), EIGHT);
         assertSame(ranking.getHand().get(3).getValue(), EIGHT);
-        assertEquals(ranking.getHand().get(4), new Card(KING, HEART));
+        assertEquals(ranking.getHand().get(4), new Card(KING, HEARTS));
     }
 
     @Test
     void SimpleFullHouseTest(){
 
         Board board = new Board();
-        board.addCard(new Card(EIGHT, SPADE));
-        board.addCard(new Card(KING, DIAMOND));
-        board.addCard(new Card(QUEEN, HEART));
-        board.addCard(new Card(EIGHT, CLUB));
-        board.addCard(new Card(QUEEN, SPADE));
+        board.addCard(new Card(EIGHT, SPADES));
+        board.addCard(new Card(KING, DIAMONDS));
+        board.addCard(new Card(QUEEN, HEARTS));
+        board.addCard(new Card(EIGHT, CLUBS));
+        board.addCard(new Card(QUEEN, SPADES));
 
-        Card handCard1 = new Card(EIGHT, HEART);
-        Card handCard2 = new Card(KING, SPADE);
+        Card handCard1 = new Card(EIGHT, HEARTS);
+        Card handCard2 = new Card(KING, SPADES);
         Hand hand = new Hand(handCard1, handCard2, board);
 
         var ranking = calculator.getHandRanking(hand);
@@ -97,64 +97,64 @@ class SimpleEvaluationTest {
     void SimpleFlushTest(){
 
         Board board = new Board();
-        board.addCard(new Card(THREE, SPADE));
-        board.addCard(new Card(QUEEN, SPADE));
-        board.addCard(new Card(KING, HEART));
-        board.addCard(new Card(EIGHT, SPADE));
-        board.addCard(new Card(TEN, SPADE));
+        board.addCard(new Card(THREE, SPADES));
+        board.addCard(new Card(QUEEN, SPADES));
+        board.addCard(new Card(KING, HEARTS));
+        board.addCard(new Card(EIGHT, SPADES));
+        board.addCard(new Card(TEN, SPADES));
 
-        Card handCard1 = new Card(FIVE, SPADE);
-        Card handCard2 = new Card(SEVEN, SPADE);
+        Card handCard1 = new Card(FIVE, SPADES);
+        Card handCard2 = new Card(SEVEN, SPADES);
         Hand hand = new Hand(handCard1, handCard2, board);
 
         var ranking = calculator.getHandRanking(hand);
 
         assertSame(ranking.getRank(), HandCalculator.HandRanking.FLUSH);
 
-        assertEquals(ranking.getHand().get(0), new Card(QUEEN, SPADE));
-        assertEquals(ranking.getHand().get(1), new Card(TEN, SPADE));
-        assertEquals(ranking.getHand().get(2), new Card(EIGHT, SPADE));
-        assertEquals(ranking.getHand().get(3), new Card(SEVEN, SPADE));
-        assertEquals(ranking.getHand().get(4), new Card(FIVE, SPADE));
+        assertEquals(ranking.getHand().get(0), new Card(QUEEN, SPADES));
+        assertEquals(ranking.getHand().get(1), new Card(TEN, SPADES));
+        assertEquals(ranking.getHand().get(2), new Card(EIGHT, SPADES));
+        assertEquals(ranking.getHand().get(3), new Card(SEVEN, SPADES));
+        assertEquals(ranking.getHand().get(4), new Card(FIVE, SPADES));
     }
 
     @Test
     void SimpleStraightTest(){
 
         Board board = new Board();
-        board.addCard(new Card(SIX, DIAMOND));
-        board.addCard(new Card(NINE, SPADE));
-        board.addCard(new Card(KING, HEART));
-        board.addCard(new Card(EIGHT, CLUB));
-        board.addCard(new Card(TEN, HEART));
+        board.addCard(new Card(SIX, DIAMONDS));
+        board.addCard(new Card(NINE, SPADES));
+        board.addCard(new Card(KING, HEARTS));
+        board.addCard(new Card(EIGHT, CLUBS));
+        board.addCard(new Card(TEN, HEARTS));
 
-        Card handCard1 = new Card(FIVE, DIAMOND);
-        Card handCard2 = new Card(SEVEN, SPADE);
+        Card handCard1 = new Card(FIVE, DIAMONDS);
+        Card handCard2 = new Card(SEVEN, SPADES);
         Hand hand = new Hand(handCard1, handCard2, board);
 
         var ranking = calculator.getHandRanking(hand);
 
         assertSame(ranking.getRank(), HandCalculator.HandRanking.STRAIGHT);
 
-        assertEquals(ranking.getHand().get(0), new Card(TEN, HEART));
-        assertEquals(ranking.getHand().get(1), new Card(NINE, SPADE));
-        assertEquals(ranking.getHand().get(2), new Card(EIGHT, CLUB));
-        assertEquals(ranking.getHand().get(3), new Card(SEVEN, SPADE));
-        assertEquals(ranking.getHand().get(4), new Card(SIX, DIAMOND));
+        assertEquals(ranking.getHand().get(0), new Card(TEN, HEARTS));
+        assertEquals(ranking.getHand().get(1), new Card(NINE, SPADES));
+        assertEquals(ranking.getHand().get(2), new Card(EIGHT, CLUBS));
+        assertEquals(ranking.getHand().get(3), new Card(SEVEN, SPADES));
+        assertEquals(ranking.getHand().get(4), new Card(SIX, DIAMONDS));
     }
 
     @Test
     void SimpleSetTest(){
 
         Board board = new Board();
-        board.addCard(new Card(QUEEN, DIAMOND));
-        board.addCard(new Card(NINE, SPADE));
-        board.addCard(new Card(KING, HEART));
-        board.addCard(new Card(EIGHT, CLUB));
-        board.addCard(new Card(TEN, HEART));
+        board.addCard(new Card(QUEEN, DIAMONDS));
+        board.addCard(new Card(NINE, SPADES));
+        board.addCard(new Card(KING, HEARTS));
+        board.addCard(new Card(EIGHT, CLUBS));
+        board.addCard(new Card(TEN, HEARTS));
 
-        Card handCard1 = new Card(EIGHT, DIAMOND);
-        Card handCard2 = new Card(EIGHT, SPADE);
+        Card handCard1 = new Card(EIGHT, DIAMONDS);
+        Card handCard2 = new Card(EIGHT, SPADES);
         Hand hand = new Hand(handCard1, handCard2, board);
 
         var ranking = calculator.getHandRanking(hand);
@@ -164,22 +164,22 @@ class SimpleEvaluationTest {
         assertSame(ranking.getHand().get(0).getValue(), EIGHT);
         assertSame(ranking.getHand().get(1).getValue(), EIGHT);
         assertSame(ranking.getHand().get(2).getValue(), EIGHT);
-        assertEquals(ranking.getHand().get(3), new Card(KING, HEART));
-        assertEquals(ranking.getHand().get(4), new Card(QUEEN, DIAMOND));
+        assertEquals(ranking.getHand().get(3), new Card(KING, HEARTS));
+        assertEquals(ranking.getHand().get(4), new Card(QUEEN, DIAMONDS));
     }
 
     @Test
     void SimpleDoublePairTest(){
 
         Board board = new Board();
-        board.addCard(new Card(EIGHT, DIAMOND));
-        board.addCard(new Card(NINE, SPADE));
-        board.addCard(new Card(KING, HEART));
-        board.addCard(new Card(QUEEN, CLUB));
-        board.addCard(new Card(TEN, HEART));
+        board.addCard(new Card(EIGHT, DIAMONDS));
+        board.addCard(new Card(NINE, SPADES));
+        board.addCard(new Card(KING, HEARTS));
+        board.addCard(new Card(QUEEN, CLUBS));
+        board.addCard(new Card(TEN, HEARTS));
 
-        Card handCard1 = new Card(QUEEN, DIAMOND);
-        Card handCard2 = new Card(EIGHT, SPADE);
+        Card handCard1 = new Card(QUEEN, DIAMONDS);
+        Card handCard2 = new Card(EIGHT, SPADES);
         Hand hand = new Hand(handCard1, handCard2, board);
 
         var ranking = calculator.getHandRanking(hand);
@@ -190,21 +190,21 @@ class SimpleEvaluationTest {
         assertSame(ranking.getHand().get(1).getValue(), QUEEN);
         assertSame(ranking.getHand().get(2).getValue(), EIGHT);
         assertSame(ranking.getHand().get(3).getValue(), EIGHT);
-        assertEquals(ranking.getHand().get(4), new Card(KING, HEART));
+        assertEquals(ranking.getHand().get(4), new Card(KING, HEARTS));
     }
 
     @Test
     void SimplePairTest(){
 
         Board board = new Board();
-        board.addCard(new Card(EIGHT, DIAMOND));
-        board.addCard(new Card(NINE, SPADE));
-        board.addCard(new Card(KING, HEART));
-        board.addCard(new Card(QUEEN, CLUB));
-        board.addCard(new Card(TEN, HEART));
+        board.addCard(new Card(EIGHT, DIAMONDS));
+        board.addCard(new Card(NINE, SPADES));
+        board.addCard(new Card(KING, HEARTS));
+        board.addCard(new Card(QUEEN, CLUBS));
+        board.addCard(new Card(TEN, HEARTS));
 
-        Card handCard1 = new Card(QUEEN, DIAMOND);
-        Card handCard2 = new Card(TWO, SPADE);
+        Card handCard1 = new Card(QUEEN, DIAMONDS);
+        Card handCard2 = new Card(TWO, SPADES);
         Hand hand = new Hand(handCard1, handCard2, board);
 
         var ranking = calculator.getHandRanking(hand);
@@ -213,33 +213,33 @@ class SimpleEvaluationTest {
 
         assertSame(ranking.getHand().get(0).getValue(), QUEEN);
         assertSame(ranking.getHand().get(1).getValue(), QUEEN);
-        assertEquals(ranking.getHand().get(2), new Card(KING, HEART));
-        assertEquals(ranking.getHand().get(3), new Card(TEN, HEART));
-        assertEquals(ranking.getHand().get(4), new Card(NINE, SPADE));
+        assertEquals(ranking.getHand().get(2), new Card(KING, HEARTS));
+        assertEquals(ranking.getHand().get(3), new Card(TEN, HEARTS));
+        assertEquals(ranking.getHand().get(4), new Card(NINE, SPADES));
     }
 
     @Test
     void SimpleHighCardTest(){
 
         Board board = new Board();
-        board.addCard(new Card(EIGHT, DIAMOND));
-        board.addCard(new Card(NINE, SPADE));
-        board.addCard(new Card(KING, HEART));
-        board.addCard(new Card(QUEEN, CLUB));
-        board.addCard(new Card(TEN, HEART));
+        board.addCard(new Card(EIGHT, DIAMONDS));
+        board.addCard(new Card(NINE, SPADES));
+        board.addCard(new Card(KING, HEARTS));
+        board.addCard(new Card(QUEEN, CLUBS));
+        board.addCard(new Card(TEN, HEARTS));
 
-        Card handCard1 = new Card(ACE, DIAMOND);
-        Card handCard2 = new Card(TWO, SPADE);
+        Card handCard1 = new Card(ACE, DIAMONDS);
+        Card handCard2 = new Card(TWO, SPADES);
         Hand hand = new Hand(handCard1, handCard2, board);
 
         var ranking = calculator.getHandRanking(hand);
 
         assertSame(ranking.getRank(), HandCalculator.HandRanking.HIGH_CARD);
 
-        assertEquals(ranking.getHand().get(0), new Card(ACE, DIAMOND));
-        assertEquals(ranking.getHand().get(1), new Card(KING, HEART));
-        assertEquals(ranking.getHand().get(2), new Card(QUEEN, CLUB));
-        assertEquals(ranking.getHand().get(3), new Card(TEN, HEART));
-        assertEquals(ranking.getHand().get(4), new Card(NINE, SPADE));
+        assertEquals(ranking.getHand().get(0), new Card(ACE, DIAMONDS));
+        assertEquals(ranking.getHand().get(1), new Card(KING, HEARTS));
+        assertEquals(ranking.getHand().get(2), new Card(QUEEN, CLUBS));
+        assertEquals(ranking.getHand().get(3), new Card(TEN, HEARTS));
+        assertEquals(ranking.getHand().get(4), new Card(NINE, SPADES));
     }
 }

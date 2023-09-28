@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import static com.stemmer.pokergame.model.ActionType.*;
 import static com.stemmer.pokergame.model.Card.Color.*;
-import static com.stemmer.pokergame.model.Card.Color.DIAMOND;
+import static com.stemmer.pokergame.model.Card.Color.DIAMONDS;
 import static com.stemmer.pokergame.model.Card.Value.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -66,25 +66,25 @@ public class AdvancedGameTest {
 
 
         Board board = new Board();
-        board.addCard(new Card(THREE, CLUB));
-        board.addCard(new Card(QUEEN, DIAMOND));
-        board.addCard(new Card(KING, HEART));
-        board.addCard(new Card(EIGHT, SPADE));
-        board.addCard(new Card(TEN, SPADE));
+        board.addCard(new Card(THREE, CLUBS));
+        board.addCard(new Card(QUEEN, DIAMONDS));
+        board.addCard(new Card(KING, HEARTS));
+        board.addCard(new Card(EIGHT, SPADES));
+        board.addCard(new Card(TEN, SPADES));
 
         //Side pot winer
-        Card handCard1 = new Card(FIVE, SPADE);
-        Card handCard2 = new Card(ACE, SPADE);
+        Card handCard1 = new Card(FIVE, SPADES);
+        Card handCard2 = new Card(ACE, SPADES);
         Hand hand1 = new Hand(handCard1, handCard2, board);
 
         //Winner
-        Card handCard3 = new Card(FIVE, DIAMOND);
-        Card handCard4 = new Card(ACE, DIAMOND);
+        Card handCard3 = new Card(FIVE, DIAMONDS);
+        Card handCard4 = new Card(ACE, DIAMONDS);
         Hand hand2 = new Hand(handCard3, handCard4, board);
 
         //loser
-        Card handCard5 = new Card(FIVE, DIAMOND);
-        Card handCard6 = new Card(TWO, DIAMOND);
+        Card handCard5 = new Card(FIVE, DIAMONDS);
+        Card handCard6 = new Card(TWO, DIAMONDS);
         Hand hand3 = new Hand(handCard5, handCard6, board);
 
         one.setHand(hand1);
@@ -126,22 +126,22 @@ public class AdvancedGameTest {
 
 
         Board board = new Board();
-        board.addCard(new Card(QUEEN, SPADE));
-        board.addCard(new Card(QUEEN, DIAMOND));
-        board.addCard(new Card(TEN, HEART));
-        board.addCard(new Card(ACE, SPADE));
-        board.addCard(new Card(FOUR, CLUB));
+        board.addCard(new Card(QUEEN, SPADES));
+        board.addCard(new Card(QUEEN, DIAMONDS));
+        board.addCard(new Card(TEN, HEARTS));
+        board.addCard(new Card(ACE, SPADES));
+        board.addCard(new Card(FOUR, CLUBS));
 
-        Card handCard1 = new Card(TEN, SPADE);
-        Card handCard2 = new Card(TWO, SPADE);
+        Card handCard1 = new Card(TEN, SPADES);
+        Card handCard2 = new Card(TWO, SPADES);
         Hand hand1 = new Hand(handCard1, handCard2, board);
 
-        Card handCard3 = new Card(SIX, CLUB);
-        Card handCard4 = new Card(TWO, CLUB);
+        Card handCard3 = new Card(SIX, CLUBS);
+        Card handCard4 = new Card(TWO, CLUBS);
         Hand hand2 = new Hand(handCard3, handCard4, board);
 
-        Card handCard5 = new Card(TEN, DIAMOND);
-        Card handCard6 = new Card(TWO, DIAMOND);
+        Card handCard5 = new Card(TEN, DIAMONDS);
+        Card handCard6 = new Card(TWO, DIAMONDS);
         Hand hand3 = new Hand(handCard5, handCard6, board);
 
         one.setHand(hand1);

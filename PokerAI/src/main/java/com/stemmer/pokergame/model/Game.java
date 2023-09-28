@@ -210,6 +210,11 @@ public abstract class Game {
 
 
     }
+
+    public Board getBoard() {
+        return board;
+    }
+
     // maybe refactor game state in own class
     public void printGameState(){
         playerList.forEach(x -> System.out.println(x.printPlayer()));

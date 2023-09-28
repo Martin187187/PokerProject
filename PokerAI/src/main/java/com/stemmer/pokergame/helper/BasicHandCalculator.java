@@ -205,21 +205,21 @@ public class BasicHandCalculator extends HandCalculator{
         int spade = 0;
         for(Card card: cardList){
             switch (card.getColor()){
-                case HEART -> heart++;
-                case DIAMOND -> diamond++;
-                case CLUB -> club++;
-                case SPADE -> spade++;
+                case HEARTS -> heart++;
+                case DIAMONDS -> diamond++;
+                case CLUBS -> club++;
+                case SPADES -> spade++;
             }
         }
         Card.Color color = null;
         if(heart > 4)
-            color = Card.Color.HEART;
+            color = Card.Color.HEARTS;
         else if (diamond > 4)
-            color = Card.Color.DIAMOND;
+            color = Card.Color.DIAMONDS;
         else if (club > 4)
-            color = Card.Color.CLUB;
+            color = Card.Color.CLUBS;
         else if (spade > 4)
-            color = Card.Color.SPADE;
+            color = Card.Color.SPADES;
 
         if(color!=null){
             List<Card> result = new LinkedList<>();

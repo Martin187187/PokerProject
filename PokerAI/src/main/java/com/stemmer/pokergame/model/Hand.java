@@ -27,6 +27,9 @@ public class Hand implements Comparable<Hand>{
         return totalCards;
     }
 
+    public List<Card> getHandCards() {
+        return handCards;
+    }
 
     @Override
     public int compareTo(Hand o) {

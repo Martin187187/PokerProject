@@ -60,17 +60,17 @@ public class MacroGameTest {
         game.playRound();
 
         Board board = new Board();
-        board.addCard(new Card(THREE, SPADE));
-        board.addCard(new Card(QUEEN, SPADE));
-        board.addCard(new Card(KING, HEART));
-        board.addCard(new Card(EIGHT, SPADE));
-        board.addCard(new Card(TEN, SPADE));
+        board.addCard(new Card(THREE, SPADES));
+        board.addCard(new Card(QUEEN, SPADES));
+        board.addCard(new Card(KING, HEARTS));
+        board.addCard(new Card(EIGHT, SPADES));
+        board.addCard(new Card(TEN, SPADES));
 
-        Card handCard1 = new Card(FIVE, SPADE);
-        Card handCard2 = new Card(SEVEN, SPADE);
+        Card handCard1 = new Card(FIVE, SPADES);
+        Card handCard2 = new Card(SEVEN, SPADES);
         Hand hand1 = new Hand(handCard1, handCard2, board);
-        Card handCard3 = new Card(ACE, SPADE);
-        Card handCard4 = new Card(EIGHT, DIAMOND);
+        Card handCard3 = new Card(ACE, SPADES);
+        Card handCard4 = new Card(EIGHT, DIAMONDS);
         Hand hand2 = new Hand(handCard3, handCard4, board);
 
         one.setHand(hand1);
@@ -96,17 +96,17 @@ public class MacroGameTest {
         System.out.println(actions);
 
         Board board = new Board();
-        board.addCard(new Card(THREE, CLUB));
-        board.addCard(new Card(QUEEN, DIAMOND));
-        board.addCard(new Card(KING, HEART));
-        board.addCard(new Card(EIGHT, SPADE));
-        board.addCard(new Card(TEN, SPADE));
+        board.addCard(new Card(THREE, CLUBS));
+        board.addCard(new Card(QUEEN, DIAMONDS));
+        board.addCard(new Card(KING, HEARTS));
+        board.addCard(new Card(EIGHT, SPADES));
+        board.addCard(new Card(TEN, SPADES));
 
-        Card handCard1 = new Card(FIVE, SPADE);
-        Card handCard2 = new Card(SEVEN, SPADE);
+        Card handCard1 = new Card(FIVE, SPADES);
+        Card handCard2 = new Card(SEVEN, SPADES);
         Hand hand1 = new Hand(handCard1, handCard2, board);
-        Card handCard3 = new Card(FIVE, DIAMOND);
-        Card handCard4 = new Card(SEVEN, DIAMOND);
+        Card handCard3 = new Card(FIVE, DIAMONDS);
+        Card handCard4 = new Card(SEVEN, DIAMONDS);
         Hand hand2 = new Hand(handCard3, handCard4, board);
 
         one.setHand(hand1);
@@ -136,25 +136,25 @@ public class MacroGameTest {
 
 
         Board board = new Board();
-        board.addCard(new Card(THREE, CLUB));
-        board.addCard(new Card(QUEEN, DIAMOND));
-        board.addCard(new Card(KING, HEART));
-        board.addCard(new Card(EIGHT, SPADE));
-        board.addCard(new Card(TEN, SPADE));
+        board.addCard(new Card(THREE, CLUBS));
+        board.addCard(new Card(QUEEN, DIAMONDS));
+        board.addCard(new Card(KING, HEARTS));
+        board.addCard(new Card(EIGHT, SPADES));
+        board.addCard(new Card(TEN, SPADES));
 
         //Side pot winer
-        Card handCard1 = new Card(FIVE, SPADE);
-        Card handCard2 = new Card(SEVEN, SPADE);
+        Card handCard1 = new Card(FIVE, SPADES);
+        Card handCard2 = new Card(SEVEN, SPADES);
         Hand hand1 = new Hand(handCard1, handCard2, board);
 
         //Winner
-        Card handCard3 = new Card(FIVE, DIAMOND);
-        Card handCard4 = new Card(ACE, DIAMOND);
+        Card handCard3 = new Card(FIVE, DIAMONDS);
+        Card handCard4 = new Card(ACE, DIAMONDS);
         Hand hand2 = new Hand(handCard3, handCard4, board);
 
         //loser
-        Card handCard5 = new Card(FIVE, DIAMOND);
-        Card handCard6 = new Card(TWO, DIAMOND);
+        Card handCard5 = new Card(FIVE, DIAMONDS);
+        Card handCard6 = new Card(TWO, DIAMONDS);
         Hand hand3 = new Hand(handCard5, handCard6, board);
 
         one.setHand(hand1);
@@ -188,25 +188,25 @@ public class MacroGameTest {
 
 
         Board board = new Board();
-        board.addCard(new Card(THREE, CLUB));
-        board.addCard(new Card(QUEEN, DIAMOND));
-        board.addCard(new Card(KING, HEART));
-        board.addCard(new Card(EIGHT, SPADE));
-        board.addCard(new Card(TEN, SPADE));
+        board.addCard(new Card(THREE, CLUBS));
+        board.addCard(new Card(QUEEN, DIAMONDS));
+        board.addCard(new Card(KING, HEARTS));
+        board.addCard(new Card(EIGHT, SPADES));
+        board.addCard(new Card(TEN, SPADES));
 
         //Side pot winer
-        Card handCard1 = new Card(FIVE, SPADE);
-        Card handCard2 = new Card(SEVEN, SPADE);
+        Card handCard1 = new Card(FIVE, SPADES);
+        Card handCard2 = new Card(SEVEN, SPADES);
         Hand hand1 = new Hand(handCard1, handCard2, board);
 
         //Winner
-        Card handCard3 = new Card(FIVE, DIAMOND);
-        Card handCard4 = new Card(ACE, DIAMOND);
+        Card handCard3 = new Card(FIVE, DIAMONDS);
+        Card handCard4 = new Card(ACE, DIAMONDS);
         Hand hand2 = new Hand(handCard3, handCard4, board);
 
         //loser
-        Card handCard5 = new Card(FIVE, DIAMOND);
-        Card handCard6 = new Card(TWO, DIAMOND);
+        Card handCard5 = new Card(FIVE, DIAMONDS);
+        Card handCard6 = new Card(TWO, DIAMONDS);
         Hand hand3 = new Hand(handCard5, handCard6, board);
 
         one.setHand(hand1);
@@ -244,25 +244,25 @@ public class MacroGameTest {
 
 
         Board board = new Board();
-        board.addCard(new Card(THREE, CLUB));
-        board.addCard(new Card(QUEEN, DIAMOND));
-        board.addCard(new Card(KING, HEART));
-        board.addCard(new Card(EIGHT, SPADE));
-        board.addCard(new Card(TEN, SPADE));
+        board.addCard(new Card(THREE, CLUBS));
+        board.addCard(new Card(QUEEN, DIAMONDS));
+        board.addCard(new Card(KING, HEARTS));
+        board.addCard(new Card(EIGHT, SPADES));
+        board.addCard(new Card(TEN, SPADES));
 
         //Side pot winer
-        Card handCard1 = new Card(FIVE, SPADE);
-        Card handCard2 = new Card(ACE, SPADE);
+        Card handCard1 = new Card(FIVE, SPADES);
+        Card handCard2 = new Card(ACE, SPADES);
         Hand hand1 = new Hand(handCard1, handCard2, board);
 
         //Winner
-        Card handCard3 = new Card(FIVE, DIAMOND);
-        Card handCard4 = new Card(ACE, DIAMOND);
+        Card handCard3 = new Card(FIVE, DIAMONDS);
+        Card handCard4 = new Card(ACE, DIAMONDS);
         Hand hand2 = new Hand(handCard3, handCard4, board);
 
         //loser
-        Card handCard5 = new Card(FIVE, DIAMOND);
-        Card handCard6 = new Card(TWO, DIAMOND);
+        Card handCard5 = new Card(FIVE, DIAMONDS);
+        Card handCard6 = new Card(TWO, DIAMONDS);
         Hand hand3 = new Hand(handCard5, handCard6, board);
 
         one.setHand(hand1);
