@@ -6,6 +6,7 @@ import { GameviewComponent } from './gameview/gameview.component';
 import { CardComponent } from './card/card.component';
 import { PlayerviewComponent } from './playerview/playerview.component';
 import { BoardComponent } from './board/board.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { BoardComponent } from './board/board.component';
     BoardComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,7 +4,7 @@ import { Game } from './game';
 
 const deck = new Deck();
 export const GAME_STATUS: Game = {
-  board_cards: [
+  boardCards: [
     deck.get_random_card(),
     deck.get_random_card(),
     deck.get_random_card(),

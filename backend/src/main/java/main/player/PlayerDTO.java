@@ -1,5 +1,6 @@
 package main.player;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.stemmer.pokergame.model.Card;
 import com.stemmer.pokergame.model.player.Player;
 import org.springframework.stereotype.Component;
@@ -9,11 +10,17 @@ import java.util.List;
 
 public class PlayerDTO {
 
+    @JsonProperty("id")
     private int id;
+    @JsonProperty("name")
     private String name;
+    @JsonProperty("hand_cards")
     private List<Card> cardList;
+    @JsonProperty("total_money")
     private int totalMoney;
+    @JsonProperty("invested_money")
     private int investedMoney;
+    @JsonProperty("status")
     private String status;
 
     public PlayerDTO(int id, Player player, boolean visible){

@@ -17,7 +17,9 @@ export class GameviewComponent {
 
   
   ngOnInit(): void {
-    this.gameStatusService.get_game_status()
-    .subscribe(gameStatus => this. game = gameStatus);
+
+    this.gameStatusService.get_game_http()
+    .subscribe(gameStatus => {this.game = gameStatus; console.log(this.game.players[0].total_money)});
+
   }
 }

@@ -8,6 +8,6 @@ export interface Player {
 
     status: string; // folded, has to call 50, raised to 500, ...
     invested_money: number;
-    total_money: number;
+    total_money: number ;
 
 }

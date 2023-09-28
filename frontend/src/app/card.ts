@@ -1,12 +1,12 @@
 export interface Card {
-    value: Value;
-    color: Color;
+    value: string;
+    color: string;
 }
 
 export enum Value {
-    TWO = "2", THREE = "3", FOUR = "4", FIVE = "5", SIX = "6", SEVEN = "7", EIGHT = "8", NINE = "9", TEN = "10", JACK = "jack", QUEEN = "queen", KING = "king", ACE = "ace"
+    TWO = "TWO", THREE = "THREE", FOUR = "FOUR", FIVE = "FIVE", SIX = "SIX", SEVEN = "SEVEN", EIGHT = "EIGHT", NINE = "NINE", TEN = "TEN", JACK = "JACK", QUEEN = "QUEEN", KING = "KING", ACE = "ACE"
 }
 
 export enum Color {
-    HEART = "hearts", DIAMOND = "diamonds", SPADE = "spades", CLUB = "clubs"
+    HEART = "HEARTS", DIAMOND = "DIAMONDS", SPADE = "SPADES", CLUB = "CLUBS"
 }

@@ -16,16 +16,16 @@ public class GameDTO {
         this.game = game;
     }
 
-    public List<PlayerDTO> getPlayerDTOList() {
+    public List<PlayerDTO> getPlayers() {
         List<PlayerDTO> result = new LinkedList<>();
         var players = new LinkedList<>(GameSingleton.getInstance().getGame().getPlayerList());
         for (int i = 0; i < players.size(); i++) {
-            result.add(new PlayerDTO(i, players.get(i), i == 0));
+            result.add(new PlayerDTO(i, players.get(i), players.get(i).getName().equals("Player 1")));
         }
         return result;
     }
 
-    public List<Card> getBoardCardList() {
+    public List<Card> getBoardCards() {
         return game.getBoard().getBoardCards();
     }
 }

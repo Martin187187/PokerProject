@@ -2,6 +2,9 @@ package main;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 
 @SpringBootApplication
@@ -12,14 +15,9 @@ public class BackendApplication {
 		GameThread gameThread = new GameThread();
 
 		gameThread.start();
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			throw new RuntimeException(e);
-		}
-
 		SpringApplication.run(BackendApplication.class, args);
 
 	}
+
 
 }
