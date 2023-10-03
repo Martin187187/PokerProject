@@ -7,6 +7,7 @@ import { CardComponent } from './card/card.component';
 import { PlayerviewComponent } from './playerview/playerview.component';
 import { BoardComponent } from './board/board.component';
 import { HttpClientModule } from '@angular/common/http';
+import { WebSocketComponent } from './webocket/webocket.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
     GameviewComponent,
     CardComponent,
     PlayerviewComponent,
-    BoardComponent
+    BoardComponent,
+    WebSocketComponent
   ],
   imports: [
     BrowserModule,
