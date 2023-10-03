@@ -18,6 +18,8 @@ export class WebSocketComponent implements OnInit {
   }
 
   sendMessage(): void {
-    this.webSocketService.sendMessage('/app/hello', 'Hello, WebSocket!');
+
+    const messageObject = { name: "Martinio" };
+    this.webSocketService.sendMessage('/app/hello', JSON.stringify(messageObject));
   }
 }
